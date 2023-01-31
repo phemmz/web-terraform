@@ -76,7 +76,6 @@ resource "aws_dynamodb_table" "tf_db_statelock" {
 
   attribute {
     name = "LockID"
-    type = "S"
   }
 }
 
