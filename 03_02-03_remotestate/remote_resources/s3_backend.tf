@@ -9,6 +9,10 @@ variable "bucket_name" {
   default = "red30-tfstate-0237"
 }
 
+terraform {
+  experiments = [variable_validation]
+}
+
 # //////////////////////////////
 # PROVIDER
 # //////////////////////////////
@@ -76,6 +80,7 @@ resource "aws_dynamodb_table" "tf_db_statelock" {
 
   attribute {
     name = "LockID"
+    type = "S"
   }
 }
 
