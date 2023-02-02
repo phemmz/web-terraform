@@ -4,6 +4,8 @@
 terraform {
   backend "s3" {
   }
+
+  experiments = [variable_validation]
 }
 
 # //////////////////////////////
