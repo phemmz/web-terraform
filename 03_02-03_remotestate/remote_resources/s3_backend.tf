@@ -9,10 +9,6 @@ variable "bucket_name" {
   default = "red30-tfstate-0237"
 }
 
-terraform {
-  experiments = [variable_validation]
-}
-
 # //////////////////////////////
 # PROVIDER
 # //////////////////////////////
