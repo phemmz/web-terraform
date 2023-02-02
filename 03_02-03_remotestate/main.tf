@@ -4,8 +4,6 @@
 terraform {
   backend "s3" {
   }
-
-  experiments = [variable_validation]
 }
 
 # //////////////////////////////
@@ -53,4 +51,6 @@ module "vpc" {
 
   enable_nat_gateway = true
   single_nat_gateway = true
+  
+  experiments = [variable_validation]
 }
